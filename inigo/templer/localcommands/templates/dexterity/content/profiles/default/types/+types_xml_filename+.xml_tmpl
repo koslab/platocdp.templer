@@ -19,7 +19,7 @@
   <property name="allow_discussion">${allow_discussion}</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">${package_dotted_name}.${content_class_filename}.${interface_name}</property> 
+  <property name="schema">${package_dotted_name}.content.${content_class_filename}.${interface_name}</property> 
 #if str($folderish) == 'True'
   <property name="klass">plone.dexterity.content.Container</property>
 #else
@@ -27,7 +27,7 @@
 #end if
   <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
-     <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
+     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
    </property>
 
   <!-- View information -->

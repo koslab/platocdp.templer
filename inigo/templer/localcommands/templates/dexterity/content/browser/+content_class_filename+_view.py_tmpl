@@ -7,7 +7,6 @@ grok.templatedir('templates')
 class Index(dexterity.DisplayForm):
     grok.context(${interface_name})
     grok.require('zope2.View')
-    grok.name('${content_class_filename}_view')
     grok.template('${content_class_filename}_view')
     grok.name('view')
 

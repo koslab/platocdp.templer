@@ -50,6 +50,7 @@ setup(name='inigo.templer',
       install_requires=[
           'setuptools',
           'templer.core',
+          'templer.zope',
           'templer.localcommands',
           # -*- Extra requirements: -*-
       ],
