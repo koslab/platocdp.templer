@@ -1,8 +1,14 @@
 [buildout]
-extensions = buildout.bootstrap
+extensions = buildout.bootstrap mr.developer
 extends = http://svn.plone.org/svn/collective/buildout/plonetest/test-4.x.cfg
 package-name = ${namespace_package}.${package}
-parts += omelette
+parts += omelette scripts
+sources-dir = dev
+auto-checkout = 
+    inigo.templer
+
+[sources]
+inigo.templer = git https://github.com/inigoconsulting/inigo.templer.git
 
 [test]
 recipe = zc.recipe.testrunner
@@ -15,3 +21,11 @@ eggs = \${instance:eggs}
 
 [instance]
 eggs += Pillow
+
+[scripts]
+recipe = zc.recipe.egg
+eggs = 
+    inigo.templer
+    Paste
+    zest.releaser
+    ${namespace_package}.${package}
