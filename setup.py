@@ -21,22 +21,41 @@ setup(name='inigo.templer',
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Framework :: Zope2",
+        "Framework :: Zope3",
+        "Framework :: Plone",
+        "Framework :: Plone :: 4.1",
+        "Framework :: Plone :: 4.2",
+        "Framework :: Plone :: 4.3",
+        "Framework :: Buildout",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Software Development :: Code Generators",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='',
-      license='gpl',
+      author='Inigo Consulting',
+      author_email='team@inigo-tech.com',
+      url='http://github.com/inigoconsulting/inigo.templer',
+      license='MIT',
       packages=find_packages(),
       namespace_packages=['inigo'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'templer.core',
+          'templer.localcommands',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [paste.paster_create_template]
+      inigo_plone = inigo.templer:InigoPlone
       """,
       )
