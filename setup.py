@@ -62,5 +62,6 @@ setup(name='inigo.templer',
       [templer.templer_sub_template]
       content_type = inigo.templer.localcommands.dexterity:DexterityContent
       behavior = inigo.templer.localcommands.dexterity:DexterityBehavior
+      upgrade_profile = inigo.templer.localcommands.genericsetup:UpgradeProfile
       """,
       )
