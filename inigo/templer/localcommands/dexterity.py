@@ -35,3 +35,27 @@ class DexterityContent(SubTemplate):
         vars['types_xml_filename'] = vars['contenttype_dottedname']
         vars['interface_name'] = "I" + vars['contenttype_classname']
         vars['add_permission_name'] = vars['package_dotted_name'] + ': Add ' + vars['contenttype_name']
+
+
+class DexterityBehavior(SubTemplate):
+    """
+    A Content Type skeleton
+    """
+
+    _template_dir = 'templates/dexterity/behavior'
+    summary = "A behavior skeleton"
+
+    vars = [
+        var('behavior_name', 'Behavior name ', default='Example Behavior'),
+        var('behavior_description', 'Behavior description ',
+            default='Description of the Example behavior'),
+
+        ]
+
+    def pre(self, command, output_dir, vars):
+        vars['behavior_classname'] = vars['behavior_name'].replace(" ", "")
+        vars['behavior_interfacename'] = 'I' + vars['behavior_classname']
+        vars['behavior_filename'] = vars['behavior_classname'].lower()
+
+        vars['behavior_short_dottedadapter'] = '.' + vars['behavior_filename'] + '.' + vars['behavior_classname']
+
