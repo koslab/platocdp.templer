@@ -63,5 +63,6 @@ setup(name='inigo.templer',
       content_type = inigo.templer.localcommands.dexterity:DexterityContent
       behavior = inigo.templer.localcommands.dexterity:DexterityBehavior
       upgrade_profile = inigo.templer.localcommands.genericsetup:UpgradeProfile
+      schemaextender = inigo.templer.localcommands.archetypes:SchemaExtender
       """,
       )
