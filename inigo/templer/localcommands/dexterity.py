@@ -58,4 +58,5 @@ class DexterityBehavior(SubTemplate):
         vars['behavior_filename'] = vars['behavior_classname'].lower()
 
         vars['behavior_short_dottedadapter'] = '.' + vars['behavior_filename'] + '.' + vars['behavior_classname']
+        vars['behavior_short_dottedinterface'] = '.' + vars['behavior_filename'] + '.' + vars['behavior_interfacename']
 

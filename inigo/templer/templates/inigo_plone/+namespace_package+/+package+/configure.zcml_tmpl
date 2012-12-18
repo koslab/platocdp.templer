@@ -11,7 +11,7 @@
 
     <includeDependencies package="." />
     <grok:grok package="." />
-
+    <include package=".behavior"/>
     <i18n:registerTranslations directory="locales" />
 
 </configure>
