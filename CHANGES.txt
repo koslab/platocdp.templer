@@ -5,4 +5,7 @@ Changelog
 --------------------
 
 - Package created using templer
-  []
+  [izhar]
+- Added initial templates [izhar] 
+- Initial development of this package was sponsored by World Council of 
+  Churches.
