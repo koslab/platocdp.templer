@@ -13,3 +13,16 @@ class UpgradeProfile(SubTemplate):
         var('upgrade_from_version', 'Profile version to upgrade from', default='*'),
         var('upgrade_to_version', 'Profile version to upgrade to'),
     ]
+
+
+class SkinLayer(SubTemplate):
+    """
+    Adds a skin layer
+    """
+
+    _template_dir = 'templates/genericsetup/skin_layer'
+    summary = 'Adds a skin layer directory'
+
+    vars = [
+        var('default_skin', 'Default skin to inherit from', default='Sunburst Theme')
+    ]

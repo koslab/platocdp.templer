@@ -16,5 +16,6 @@
     <include package=".behavior"/>
     <include package=".portlet"/>
 
+    <!-- -*- extra stuff goes here -*- -->
 
 </configure>
