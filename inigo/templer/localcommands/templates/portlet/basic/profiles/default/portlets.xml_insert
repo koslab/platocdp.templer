@@ -1,4 +1,4 @@
  <portlet 
-   addview="${package_dotted_name}.portlet.${portlet_classname}"
+   addview="${portlet_id}"
    title="${portlet_name}"
    description="${portlet_description}"/>

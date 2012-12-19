@@ -66,5 +66,6 @@ setup(name='inigo.templer',
       skin_layer = inigo.templer.localcommands.genericsetup:SkinLayer
       schemaextender = inigo.templer.localcommands.archetypes:SchemaExtender
       basic_portlet = inigo.templer.localcommands.portlet:BasicPortlet
+      nonconfigurable_portlet = inigo.templer.localcommands.portlet:NonConfigurablePortlet
       """,
       )
