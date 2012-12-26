@@ -71,27 +71,35 @@ our clients.
 
 The local commands are:
 
- * *content_type* - This adds a skeleton Dexterity Content Type similar to
-   templer.dexterity, however with a different layout.
+* *content_type* - This adds a skeleton Dexterity Content Type similar to
+  templer.dexterity, however with a different layout.
 
- * *behavior* - This adds a skeleton for Dexterity Content Type similar to
-   templer.dexterity.
+* *behavior* - This adds a skeleton for Dexterity Content Type similar to
+  templer.dexterity.
 
- * *basic_portlet* - This adds a skeleton for a configurable portlet.
+* *basic_portlet* - This adds a skeleton for a configurable portlet.
 
- * *nonconfigurable_portlet* - This adds a skeleton for a nonconfigurable
-   portlet. This skeleton can also add assignment profile to specific content
-   types.
+* *nonconfigurable_portlet* - This adds a skeleton for a nonconfigurable
+  portlet. This skeleton can also add assignment profile to specific content
+  types.
 
- * *schemaextender* - This adds a skeleton for an archetypes.schemaextender
-   browserlayer aware extender.
+* *schemaextender* - This adds a skeleton for an archetypes.schemaextender
+  browserlayer aware extender.
 
- * *skin_layer* - This adds a single FileSystemDirectoryView skin layer into 
-   the product
+* *skin_layer* - This adds a single FileSystemDirectoryView skin layer into 
+  the product
 
- * *upgrade_profile* - This adds a skeleton for a GenericSetup upgrade profile
-   and handler for the product.
+* *upgrade_profile* - This adds a skeleton for a GenericSetup upgrade profile
+  and handler for the product.
 
 Todo/Wishlist:
 
-  * custom indexer, vocabularyfactory, z3cform widget
+ * custom indexer, vocabularyfactory, z3cform widget
+
+Hacking/Contributing
+=====================
+
+Feel free to fork and modify/add functionalities and submit improvements for
+this package. It is using inigo.* namespace primarily because the template
+layout is following our internal best practices, of which might not be the 
+same as upstream Plone practices.
