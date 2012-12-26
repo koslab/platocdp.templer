@@ -94,7 +94,8 @@ The local commands are:
 
 Todo/Wishlist:
 
-* custom indexer, vocabularyfactory, z3cform widget
+* custom indexer, vocabularyfactory, z3cform widget, viewlet, catalog index,
+  topic metadata
 
 Hacking/Contributing
 =====================
