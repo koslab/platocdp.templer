@@ -97,6 +97,19 @@ Todo/Wishlist:
 * custom indexer, vocabularyfactory, z3cform widget, viewlet, catalog index,
   topic metadata
 
+inigo_buildout
+--------------
+
+(To be developed). This template will be providing a skeleton buildout which 
+provides:
+
+* buildout.cfg + deployment.cfg based template (separation between
+  development, deployment buildout)
+
+* OpenShift deployment hooks
+
+* Local commands to add additional parts into buildout.cfg.
+
 Hacking/Contributing
 =====================
 
