@@ -16,7 +16,7 @@ class ${schemaextender_classname}(grok.Adapter):
     # This applies to all AT Content Types, change this to
     # the specific content type interface you want to extend
     grok.context(IATContentType)
-
+    grok.name('${package_dotted_name}.${schemaextender_class_filename}')
     grok.implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
     grok.provides(IOrderableSchemaExtender)
 
