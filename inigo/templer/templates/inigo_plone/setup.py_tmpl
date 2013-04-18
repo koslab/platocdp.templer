@@ -29,6 +29,10 @@ setup(name=${repr($project)},
           'plone.app.dexterity',
           'plone.namedfile [blobs]',
           'collective.grok',
+          'plone.app.referenceablebehavior',
+          'collective.dexteritytextindexer',
+          'plone.app.multilingual',
+          'plone.multilingualbehavior',
           # -*- Extra requirements: -*-
       ],
       extras_require={

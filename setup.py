@@ -58,6 +58,8 @@ setup(name='inigo.templer',
       # -*- Entry points: -*-
       [paste.paster_create_template]
       inigo_plone = inigo.templer:InigoPlone
+      inigo_theme = inigo.templer:InigoTheme
+      inigo_buildout = inigo.templer:InigoBuildout
 
       [templer.templer_sub_template]
       content_type = inigo.templer.localcommands.dexterity:DexterityContent
