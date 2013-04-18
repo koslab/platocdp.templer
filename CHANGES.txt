@@ -5,6 +5,10 @@ Changelog
 ----------------
 
 - added code to delegate behavior attributes to context [izhar]
+- enable multilingual, exclfromnav, dexteritytextindexer, and referenceable
+  behavior by default [izhar]
+- initial skeleton for inigo_buildout and inigo_theme [izhar]
+- schemaextender adapter should be named adapter [izhar]
 
 
 1.0 (2012-12-19)
