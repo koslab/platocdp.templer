@@ -26,3 +26,12 @@ class SkinLayer(SubTemplate):
     vars = [
         var('default_skin', 'Default skin to inherit from', default='Sunburst Theme')
     ]
+
+class CSSResource(SubTemplate):
+
+    _template_dir = 'templates/genericsetup/cssresource'
+    summary = 'Adds a CSS resource into Plone registry'
+
+    vars = [
+        var('css_filename', 'CSS filename')
+    ]

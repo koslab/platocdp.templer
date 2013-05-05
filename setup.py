@@ -71,5 +71,6 @@ setup(name='inigo.templer',
       nonconfigurable_portlet = inigo.templer.localcommands.portlet:NonConfigurablePortlet
       viewlet = inigo.templer.localcommands.browser:Viewlet
       view = inigo.templer.localcommands.browser:View
+      css = inigo.templer.localcommands.genericsetup:CSSResource
       """,
       )
