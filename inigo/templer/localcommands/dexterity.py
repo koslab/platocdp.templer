@@ -17,7 +17,7 @@ class DexterityContent(SubTemplate):
     vars = [
         var('contenttype_name', 'Content type name ', default='Example Type'),
         var('contenttype_description', 'Content type description ',
-            default='Description of the Example Type'),
+            default=''),
         var('folderish', 'True/False: Content type is Folderish ',
             default=False),
         var('global_allow', 'True/False: Globally addable ',
