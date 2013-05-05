@@ -72,5 +72,6 @@ setup(name='inigo.templer',
       viewlet = inigo.templer.localcommands.browser:Viewlet
       view = inigo.templer.localcommands.browser:View
       css = inigo.templer.localcommands.genericsetup:CSSResource
+      js = inigo.templer.localcommands.genericsetup:JSResource
       """,
       )

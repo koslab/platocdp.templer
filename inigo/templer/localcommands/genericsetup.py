@@ -35,3 +35,12 @@ class CSSResource(SubTemplate):
     vars = [
         var('css_filename', 'CSS filename')
     ]
+
+class JSResource(SubTemplate):
+
+    _template_dir = 'templates/genericsetup/jsresource'
+    summary = 'Adds a JS resource into Plone registry'
+
+    vars = [
+        var('js_filename', 'JS filename')
+    ]
