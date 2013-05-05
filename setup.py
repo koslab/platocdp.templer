@@ -69,5 +69,7 @@ setup(name='inigo.templer',
       schemaextender = inigo.templer.localcommands.archetypes:SchemaExtender
       basic_portlet = inigo.templer.localcommands.portlet:BasicPortlet
       nonconfigurable_portlet = inigo.templer.localcommands.portlet:NonConfigurablePortlet
+      viewlet = inigo.templer.localcommands.browser:Viewlet
+      view = inigo.templer.localcommands.browser:View
       """,
       )
