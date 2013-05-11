@@ -60,6 +60,7 @@ setup(name='inigo.templer',
       inigo_plone = inigo.templer:InigoPlone
       inigo_theme = inigo.templer:InigoTheme
       inigo_buildout = inigo.templer:InigoBuildout
+      inigo_i18noverride = inigo.templer:InigoI18NOverride
 
       [templer.templer_sub_template]
       content_type = inigo.templer.localcommands.dexterity:DexterityContent
