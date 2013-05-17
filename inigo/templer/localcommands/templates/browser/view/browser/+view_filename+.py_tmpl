@@ -6,5 +6,5 @@ grok.templatedir('templates')
 class ${view_classname}(grok.View):
     grok.context(IContentish)
     grok.name('${view_filename}')
-    grok.permission('zope2.View')
+    grok.require('zope2.View')
     grok.template('${view_filename}')
