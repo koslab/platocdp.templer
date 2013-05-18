@@ -74,5 +74,6 @@ setup(name='inigo.templer',
       view = inigo.templer.localcommands.browser:View
       css = inigo.templer.localcommands.genericsetup:CSSResource
       js = inigo.templer.localcommands.genericsetup:JSResource
+      vocabulary = inigo.templer.localcommands.components:Vocabulary
       """,
       )
