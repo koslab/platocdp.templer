@@ -58,6 +58,7 @@ setup(name='inigo.templer',
       # -*- Entry points: -*-
       [paste.paster_create_template]
       inigo_plone = inigo.templer:InigoPlone
+      inigo_policy = inigo.templer:InigoPolicy
       inigo_theme = inigo.templer:InigoTheme
       inigo_buildout = inigo.templer:InigoBuildout
       inigo_i18noverride = inigo.templer:InigoI18NOverride
