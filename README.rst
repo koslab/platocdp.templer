@@ -92,23 +92,61 @@ The local commands are:
 * *upgrade_profile* - This adds a skeleton for a GenericSetup upgrade profile
   and handler for the product.
 
+* *viewlet* - This adds a skeleton for a basic viewlet
+
+* *view* - This adds a skeleton for a basic View based on grok.View
+
+* *css* - This adds genericsetup xml settings for inclusion of css
+
+* *js* - This adds genericsetup xml settings for inclusion of js
+
+* *vocabulary* - This adds skeleton for a named VocabularyFactory
+
 Todo/Wishlist:
 
-* custom indexer, vocabularyfactory, z3cform widget, viewlet, catalog index,
-  topic metadata
+* custom indexer, z3cform widget, catalog index,  topic metadata
 
 inigo_buildout
 --------------
 
-(To be developed). This template will be providing a skeleton buildout which 
-provides:
+This template provides a skeleton buildout which provides:
 
 * buildout.cfg + deployment.cfg based template (separation between
   development, deployment buildout)
 
-* OpenShift deployment hooks
+* OpenShift deployment hooks (outdated at the moment)
 
-* Local commands to add additional parts into buildout.cfg.
+* site.cfg for site-specific settings
+
+* releaser script to aid in releasing packages from mr.developer list
+
+* example haproxy.cfg and varnish.vcl
+
+inigo_theme
+------------
+
+This template provides an initial Diazo theme package to work with. It includes
+an rudimentary rules.xml with simple index.html based on sunburst's actual
+template, a skin layer, and a z3c.jbot directory for overriding templates.
+
+Local commands usable here:
+
+* *css* - This adds genericsetup xml settings for inclusion of css
+
+* *js* - This adds genericsetup xml settings for inclusion of js
+
+
+inigo_policy
+-------------
+
+This template provides a basic package which is useful as a site policy
+package. Its simple a basic package with genericsetup install/upgrade profile,
+and a browserlayer.
+
+inigo_i18noverride
+-------------------
+
+This template provide a basic package for overriding locales
 
 Hacking/Contributing
 =====================
@@ -116,4 +154,5 @@ Hacking/Contributing
 Feel free to fork and modify/add functionalities and submit improvements for
 this package. It is using inigo.* namespace primarily because the template
 layout is following our internal best practices, of which might not be the 
-same as upstream Plone practices.
+same as upstream Plone practices. However, we believe that some of these should
+be pushed upstream if the community want it.
