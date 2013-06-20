@@ -15,3 +15,5 @@ haproxy-port = 8080
 
 haproxy-user = ${site:effective-user}
 haproxy-group = haproxy
+
+zodb-cache-size=5000
