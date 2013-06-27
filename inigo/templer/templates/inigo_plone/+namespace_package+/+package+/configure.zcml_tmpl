@@ -16,6 +16,10 @@
     <include package=".behavior"/>
     <include package=".portlet"/>
 
+    <browser:resourceDirectory 
+        name="${namespace_package}.${package}"
+        directory="static"/>
+
     <!-- -*- extra stuff goes here -*- -->
 
 </configure>
