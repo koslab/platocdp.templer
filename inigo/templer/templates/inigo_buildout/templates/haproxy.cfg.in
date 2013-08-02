@@ -1,4 +1,5 @@
 global
+        daemon
         log 127.0.0.1   local7  debug
         maxconn  ${haproxy-config:maxconn}
         user     ${haproxy-config:user}
@@ -14,6 +15,10 @@ defaults
         timeout connect 30s
         timeout client 50s
         timeout server 50s
+
+frontend http
+    bind ${haproxy-config:address}
+    default_backend zopes
 
 backend zopes
         #option httpclose
