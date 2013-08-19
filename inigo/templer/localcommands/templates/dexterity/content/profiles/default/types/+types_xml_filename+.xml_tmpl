@@ -32,6 +32,7 @@
      <element value="plone.multilingualbehavior.interfaces.IDexterityTranslatable"/>
      <element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/>
      <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
+     <element value="plone.app.versioningbehavior.behaviors.IVersionable"/>
    </property>
 
   <!-- View information -->

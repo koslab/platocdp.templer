@@ -33,6 +33,7 @@ setup(name=${repr($project)},
           'collective.dexteritytextindexer',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
+          'plone.app.versioningbehavior',
           # -*- Extra requirements: -*-
       ],
       extras_require={
