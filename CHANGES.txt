@@ -4,7 +4,13 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- enable versioning behavior by default [izhar]
+- fix haproxy config to also have a frontend settings block [izhar]
+- browser:resourceDirectory plone 4.3 compat [izhar]
+- install plone.app.relationfield and plone.formwidget.contenttree by
+  default [izhar]
+- use z3cform in portlets [izhar]
+- overrideable zodb-cache-size [izhar]
 
 
 1.2 (2013-06-20)
