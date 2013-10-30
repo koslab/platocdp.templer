@@ -18,5 +18,5 @@ class ${vocabulary_classname}(grok.GlobalUtility):
     def __call__(self, context):
         terms = []
         for i in self._terms:
-            terms.append(SimpleTerm(*i))
+            terms.append(SimpleTerm(**i))
         return SimpleVocabulary(terms)
