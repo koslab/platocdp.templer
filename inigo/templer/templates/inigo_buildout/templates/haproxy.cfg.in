@@ -21,12 +21,13 @@ frontend http
     default_backend zopes
 
 backend zopes
-        #option httpclose
         option httpchk
-        #option persist
         option forwardfor
-        balance roundrobin
+        balance leastconn
+        stats enable
+        stats uri /haproxy-status
+        stats refresh 5s
         cookie serverid insert indirect nocache
-        server z1 ${instance:http-address} cookie z1 check inter 30s rise 2 fall 4 maxconn 20
-        server z2 ${instance2:http-address} cookie z2 check inter 30s rise 2 fall 4 maxconn 20
+        server instance1 ${instance:http-address} check inter 10s fastinter 1s fall 2 maxconn 4 slowstart 120000 maxqueue 4 on-error mark-down error-limit 5
+        server instance2 ${instance2:http-address} check inter 10s fastinter 1s fall 2 maxconn 4 slowstart 120000 maxqueue 4 on-error mark-down error-limit 5
         

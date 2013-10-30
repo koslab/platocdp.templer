@@ -38,16 +38,26 @@ sub vcl_recv {
         # We only deal with GET and HEAD by default
         return(pass);
     }
+
+    call clear_analytics_cookies;
     call normalize_accept_encoding;
     call annotate_request;
     return(lookup);
 }
 
 sub vcl_fetch {
-    if (!beresp.cacheable) {
+
+    if (!beresp.ttl > 0s) {
         set beresp.http.X-Varnish-Action = "FETCH (pass - not cacheable)";
         return(pass);
     }
+
+    if (beresp.http.X-Theme-Disabled) {
+        set beresp.http.X-Varnish-Action = "FETCH (pass - not cacheable, X-Theme-Disabled)";
+        call rewrite_s_maxage;
+        return(hit_for_pass);
+    }
+
     if (beresp.http.Set-Cookie) {
         set beresp.http.X-Varnish-Action = "FETCH (pass - response sets cookie)";
         return(pass);
@@ -69,7 +79,6 @@ sub vcl_fetch {
 }
 
 sub vcl_deliver {
-    call rewrite_age;
 }
 
 
@@ -90,18 +99,23 @@ sub normalize_accept_encoding {
     }
 }
 
+# removes all cookies named __utm? (utma, utmb...) - tracking thing
+
+sub clear_analytics_cookies {
+    if (req.http.Cookie) {
+        set req.http.Cookie = regsuball(req.http.Cookie, "(^|; ) *__utm.=[^;]+;? *", "\1"); 
+
+        if (req.http.Cookie == "") {
+            remove req.http.Cookie;
+        }
+    }
+}
+
+
 # Keep auth/anon variants apart if "Vary: X-Anonymous" is in the response
 sub annotate_request {
     if (!(req.http.Authorization || req.http.cookie ~ "(^|.*; )__ac=")) {
         set req.http.X-Anonymous = "True";
-    }
-}
-
-# The varnish response should always declare itself to be fresh
-sub rewrite_age {
-    if (resp.http.Age) {
-        set resp.http.X-Varnish-Age = resp.http.Age;
-        set resp.http.Age = "0";
     }
 }
 
