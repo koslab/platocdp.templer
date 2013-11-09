@@ -60,19 +60,23 @@ sub vcl_fetch {
 
     if (beresp.http.Set-Cookie) {
         set beresp.http.X-Varnish-Action = "FETCH (pass - response sets cookie)";
+        call rewrite_s_maxage;
         return(pass);
     }
     if (!beresp.http.Cache-Control ~ "s-maxage=[1-9]" && beresp.http.Cache-Control ~ "(private|no-cache|no-store)") {
         set beresp.http.X-Varnish-Action = "FETCH (pass - response sets private/no-cache/no-store token)";
+        call rewrite_s_maxage;
         return(pass);
     }
     if (req.http.Authorization && !beresp.http.Cache-Control ~ "public") {
         set beresp.http.X-Varnish-Action = "FETCH (pass - authorized and no public cache control)";
+        call rewrite_s_maxage;
         return(pass);
     }
     if (req.http.X-Anonymous && !beresp.http.Cache-Control) {
-        set beresp.ttl = 600s;
-        set beresp.http.X-Varnish-Action = "FETCH (override - backend not setting cache control)";
+        set beresp.http.X-Varnish-Action = "FETCH (pass - backend not setting cache control)";
+        call rewrite_s_maxage;
+        return(pass);
     }
     call rewrite_s_maxage;
     return(deliver);
