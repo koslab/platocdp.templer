@@ -28,6 +28,6 @@ backend zopes
         stats uri /haproxy-status
         stats refresh 5s
         cookie serverid insert indirect nocache
-        server instance1 ${instance:http-address} check inter 10s fastinter 1s fall 2 maxconn 4 slowstart 120000 maxqueue 4 on-error mark-down error-limit 5
-        server instance2 ${instance2:http-address} check inter 10s fastinter 1s fall 2 maxconn 4 slowstart 120000 maxqueue 4 on-error mark-down error-limit 5
+        server instance1 ${instance1:http-address} check inter 10s fastinter 1s fall 2 maxconn ${instance1:zserver-threads} slowstart 120000 on-error mark-down error-limit 5
+        server instance2 ${instance2:http-address} check inter 10s fastinter 1s fall 2 maxconn ${instance2:zserver-threads} slowstart 120000 on-error mark-down error-limit 5
         
