@@ -2,8 +2,8 @@
 
 effective-user = 
 
-instance-host = 127.0.0.1
-instance-port = 8081
+instance1-host = 127.0.0.1
+instance1-port = 8081
 
 instance2-host = 127.0.0.1
 instance2-port = 8082
