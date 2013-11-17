@@ -23,9 +23,7 @@ class SkinLayer(SubTemplate):
     _template_dir = 'templates/genericsetup/skin_layer'
     summary = 'Adds a skin layer directory'
 
-    vars = [
-        var('default_skin', 'Default skin to inherit from', default='Sunburst Theme')
-    ]
+    vars = []
 
 class CSSResource(SubTemplate):
 

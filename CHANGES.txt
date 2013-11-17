@@ -4,7 +4,7 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- remove default skin layer option in genericsetup skin
 
 
 1.4 (2013-10-30)
