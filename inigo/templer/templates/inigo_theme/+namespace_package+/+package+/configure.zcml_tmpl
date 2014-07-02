@@ -24,6 +24,7 @@
         name="${namespace_package}.${package}"
         directory="static"/>
 
+    <include package="five.pt" />
     <!-- -*- extra stuff goes here -*- -->
 
 </configure>
