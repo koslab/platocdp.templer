@@ -114,8 +114,6 @@ This template provides a skeleton buildout which provides:
 * buildout.cfg + deployment.cfg based template (separation between
   development, deployment buildout)
 
-* OpenShift deployment hooks (outdated at the moment)
-
 * site.cfg for site-specific settings
 
 * releaser script to aid in releasing packages from mr.developer list

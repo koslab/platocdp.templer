@@ -14,7 +14,7 @@ find-links +=
 
 [versions]
 plone.app.multilingual = 1.2
-inigo.templer = 1.4
+inigo.templer = 1.5
 
 [test]
 recipe = zc.recipe.testrunner
