@@ -9,7 +9,7 @@ from templer.localcommands import LOCAL_COMMANDS_MESSAGE
 
 class InigoBuildout(BasicBuildout):
     _template_dir = 'templates/inigo_buildout'
-    summary = 'A Plone buildout with dev/prod cfg, and OpenShift'
+    summary = 'A Plone buildout with dev/prod cfg'
     help = ''''''
     post_run_msg = LOCAL_COMMANDS_MESSAGE
     category = 'Plone Development'
