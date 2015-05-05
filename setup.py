@@ -14,9 +14,9 @@ long_description = (
     open('CHANGES.txt').read()
     + '\n')
 
-setup(name='inigo.templer',
+setup(name='platocdp.templer',
       version=version,
-      description="Convenience templer templates for Inigo stuff",
+      description="Convenience templer templates for PlatoCDP stuff",
       long_description=long_description,
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -39,12 +39,12 @@ setup(name='inigo.templer',
         "Topic :: Software Development :: Code Generators",
         ],
       keywords='',
-      author='Inigo Consulting',
-      author_email='team@inigo-tech.com',
-      url='http://github.com/inigoconsulting/inigo.templer',
+      author='KOSLAB Technologies',
+      author_email='izhar@koslab.org',
+      url='http://github.com/koslab/platocdp.templer',
       license='MIT',
       packages=find_packages(),
-      namespace_packages=['inigo'],
+      namespace_packages=['platocdp'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
@@ -57,24 +57,24 @@ setup(name='inigo.templer',
       entry_points="""
       # -*- Entry points: -*-
       [paste.paster_create_template]
-      inigo_plone = inigo.templer:InigoPlone
-      inigo_policy = inigo.templer:InigoPolicy
-      inigo_theme = inigo.templer:InigoTheme
-      inigo_buildout = inigo.templer:InigoBuildout
-      inigo_i18noverride = inigo.templer:InigoI18NOverride
+      platocdp_plone = platocdp.templer:PlatoCDPPlone
+      platocdp_policy = platocdp.templer:PlatoCDPPolicy
+      platocdp_theme = platocdp.templer:PlatoCDPTheme
+      platocdp_buildout = platocdp.templer:PlatoCDPBuildout
+      platocdp_i18noverride = platocdp.templer:PlatoCDPI18NOverride
 
       [templer.templer_sub_template]
-      content_type = inigo.templer.localcommands.dexterity:DexterityContent
-      behavior = inigo.templer.localcommands.dexterity:DexterityBehavior
-      upgrade_profile = inigo.templer.localcommands.genericsetup:UpgradeProfile
-      skin_layer = inigo.templer.localcommands.genericsetup:SkinLayer
-      schemaextender = inigo.templer.localcommands.archetypes:SchemaExtender
-      basic_portlet = inigo.templer.localcommands.portlet:BasicPortlet
-      nonconfigurable_portlet = inigo.templer.localcommands.portlet:NonConfigurablePortlet
-      viewlet = inigo.templer.localcommands.browser:Viewlet
-      view = inigo.templer.localcommands.browser:View
-      css = inigo.templer.localcommands.genericsetup:CSSResource
-      js = inigo.templer.localcommands.genericsetup:JSResource
-      vocabulary = inigo.templer.localcommands.components:Vocabulary
+      content_type = platocdp.templer.localcommands.dexterity:DexterityContent
+      behavior = platocdp.templer.localcommands.dexterity:DexterityBehavior
+      upgrade_profile = platocdp.templer.localcommands.genericsetup:UpgradeProfile
+      skin_layer = platocdp.templer.localcommands.genericsetup:SkinLayer
+      schemaextender = platocdp.templer.localcommands.archetypes:SchemaExtender
+      basic_portlet = platocdp.templer.localcommands.portlet:BasicPortlet
+      nonconfigurable_portlet = platocdp.templer.localcommands.portlet:NonConfigurablePortlet
+      viewlet = platocdp.templer.localcommands.browser:Viewlet
+      view = platocdp.templer.localcommands.browser:View
+      css = platocdp.templer.localcommands.genericsetup:CSSResource
+      js = platocdp.templer.localcommands.genericsetup:JSResource
+      vocabulary = platocdp.templer.localcommands.components:Vocabulary
       """,
       )

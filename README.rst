@@ -3,8 +3,11 @@
 Introduction
 ============
 
-This package contains templer templates used by Inigo Consulting as our
+This package contains templer templates used by PlatoCDP as our
 standard package structure.
+
+It was forked from inigo.templer, and is the spiritual successor
+of the templates, focusing on PlatoCDP.
 
 Installation
 =============

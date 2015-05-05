@@ -1,3 +1,5 @@
+Copyright (C) 2014, KOSLAB Technologies
+
 Copyright (C) 2012, Inigo Consulting Sdn Bhd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
