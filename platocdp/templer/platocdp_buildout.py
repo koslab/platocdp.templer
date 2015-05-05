@@ -7,8 +7,8 @@ from templer.localcommands import SUPPORTS_LOCAL_COMMANDS
 from templer.localcommands import LOCAL_COMMANDS_MESSAGE
 
 
-class InigoBuildout(BasicBuildout):
-    _template_dir = 'templates/inigo_buildout'
+class PlatoCDPBuildout(BasicBuildout):
+    _template_dir = 'templates/platocdp_buildout'
     summary = 'A Plone buildout with dev/prod cfg'
     help = ''''''
     post_run_msg = LOCAL_COMMANDS_MESSAGE

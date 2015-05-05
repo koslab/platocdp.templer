@@ -7,13 +7,13 @@ from templer.localcommands import SUPPORTS_LOCAL_COMMANDS
 from templer.localcommands import LOCAL_COMMANDS_MESSAGE
 
 
-class InigoPlone(BasicZope):
-    _template_dir = 'templates/inigo_plone'
-    summary = 'A comprehensive Plone package for Inigo projects'
+class PlatoCDPPlone(BasicZope):
+    _template_dir = 'templates/platocdp_plone'
+    summary = 'A comprehensive Plone package for PlatoCDP projects'
     help = '''
 This template support local commands. These commands allow you 
 to generate skeleton contenttype, behavior, upgrade profiles, 
-schemaextender, etc, etc. All that common in Inigo's line of
+schemaextender, etc, etc. All that common in PlatoCDP's line of
 work
 '''
     post_run_msg = LOCAL_COMMANDS_MESSAGE
@@ -37,8 +37,8 @@ in Plone's Add/Remove products form.
     ))
 
     def pre(self, command, output_dir, vars):
-        super(InigoPlone, self).pre(command, output_dir, vars)
+        super(PlatoCDPPlone, self).pre(command, output_dir, vars)
         vars['use_localcommands'] = self.use_local_commands
-        vars['author'] = 'Inigo Consulting'
-        vars['author_email'] = 'team@inigo-tech.com'
-        vars['url'] = 'http://github.com/inigoconsulting/'
+        vars['author'] = 'KOSLAB Technologies'
+        vars['author_email'] = 'izhar@koslab.org'
+        vars['url'] = 'http://github.com/koslab/'

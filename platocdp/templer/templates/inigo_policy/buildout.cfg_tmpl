@@ -5,16 +5,17 @@ package-name = ${namespace_package}.${package}
 parts = omelette scripts
 sources-dir = dev
 find-links +=
-    http://packages.inigo-tech.com/packages/
+#    custom find-links
+#
 #auto-checkout = 
-#    inigo.templer
+#    platocdp.templer
 
 #[sources]
-#inigo.templer = git https://github.com/inigoconsulting/inigo.templer.git
+#platocdp.templer = git https://github.com/koslab/platocdp.templer.git
 
 [versions]
 plone.app.multilingual = 1.2
-inigo.templer = 1.5
+platocdp.templer = 1.5
 
 [test]
 recipe = zc.recipe.testrunner
@@ -31,7 +32,7 @@ eggs += Pillow
 [scripts]
 recipe = zc.recipe.egg
 eggs = 
-    inigo.templer
+    platocdp.templer
     PasteScript
     zest.releaser
     ${namespace_package}.${package}

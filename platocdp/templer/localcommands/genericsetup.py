@@ -1,5 +1,5 @@
 from templer.core.vars import var
-from inigo.templer.localcommands import SubTemplate
+from platocdp.templer.localcommands import SubTemplate
 
 class UpgradeProfile(SubTemplate):
     """

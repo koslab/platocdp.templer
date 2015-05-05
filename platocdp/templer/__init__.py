@@ -1,6 +1,6 @@
 # This package may contain traces of nuts
-from inigo.templer.inigo_plone import InigoPlone
-from inigo.templer.inigo_policy import InigoPolicy
-from inigo.templer.inigo_buildout import InigoBuildout
-from inigo.templer.inigo_theme import InigoTheme
-from inigo.templer.inigo_i18noverride import InigoI18NOverride
+from platocdp.templer.platocdp_plone import PlatoCDPPlone
+from platocdp.templer.platocdp_policy import PlatoCDPPolicy
+from platocdp.templer.platocdp_buildout import PlatoCDPBuildout
+from platocdp.templer.platocdp_theme import PlatoCDPTheme
+from platocdp.templer.platocdp_i18noverride import PlatoCDPI18NOverride
