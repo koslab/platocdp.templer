@@ -21,14 +21,14 @@ Create a buildout using this configuration::
   recipe = zc.recipe.egg
   eggs = 
      templer.core
-     inigo.templer
+     platocdp.templer
 
 Method 2: Install into system python
 ------------------------------------
 
 ::
 
-  easy_install inigo.templer
+  easy_install platocdp.templer
 
 
 Usage
@@ -39,7 +39,7 @@ Instantiating template
 
 ::
 
-  templer inigo_plone
+  templer platocdp_plone
 
 This will create a folder with your development package.
 
@@ -62,8 +62,8 @@ Once buildout is successful, you can use paster to add localcommand templates::
 Templates
 ==========
 
-inigo_plone
-------------
+platocdp_plone
+---------------
 
 This template contains our standardized package structure and several local
 commands to aid in common tasks related to Plone add-on development for
@@ -106,8 +106,8 @@ Todo/Wishlist:
 
 * custom indexer, z3cform widget, catalog index,  topic metadata
 
-inigo_buildout
---------------
+platocdp_buildout
+------------------
 
 This template provides a skeleton buildout which provides:
 
@@ -120,8 +120,8 @@ This template provides a skeleton buildout which provides:
 
 * example haproxy.cfg and varnish.vcl
 
-inigo_theme
-------------
+platocdp_theme
+---------------
 
 This template provides an initial Diazo theme package to work with. It includes
 an rudimentary rules.xml with simple index.html based on sunburst's actual
@@ -134,15 +134,15 @@ Local commands usable here:
 * *js* - This adds genericsetup xml settings for inclusion of js
 
 
-inigo_policy
--------------
+platocdp_policy
+----------------
 
 This template provides a basic package which is useful as a site policy
 package. Its simple a basic package with genericsetup install/upgrade profile,
 and a browserlayer.
 
-inigo_i18noverride
--------------------
+platocdp_i18noverride
+---------------------
 
 This template provide a basic package for overriding locales
 
@@ -150,7 +150,7 @@ Hacking/Contributing
 =====================
 
 Feel free to fork and modify/add functionalities and submit improvements for
-this package. It is using inigo.* namespace primarily because the template
+this package. It is using platocdp.* namespace primarily because the template
 layout is following our internal best practices, of which might not be the 
 same as upstream Plone practices. However, we believe that some of these should
 be pushed upstream if the community want it.
